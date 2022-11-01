@@ -1,82 +1,174 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --light-blue: rgba(13, 193, 242, 1);
 }
 
 body {
-    
+  background-color: var(--light-blue);
+  font-family: 'Montserrat', sans-serif;
+
+  background: rgba(13, 193, 242, 1);
+  background: -webkit-radial-gradient(
+    center,
+    rgba(13, 193, 242, 1),
+    rgba(72, 186, 184, 1)
+  );
+  color: white;
+}
+
+.title {
+  height: 160px;
 }
 
 h1 {
-    text-transform: uppercase;
-    text-align: center;
-    padding: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+  font-size: 56px;
 }
 
-input {
-    
+.core {
+  width: 1000px;
+  height: 500px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  border: 3px solid white;
+  border-radius: 20px;
 }
 
+.coreInfo {
+  display: flex;
+  width: 49%;
+  height: 99%;
 
-
-button {
-   
+  flex-wrap: wrap;
+  border-right: 3px solid white;
 }
 
-button:hover {
-   
-}
-
-.wrapper {
-    
-}
-
-.top {
-    height: 260px;
-}
-
-.bottom {
-    height: 140px;
-}
-
-.main-info {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 200px;
-}
-
-.city-name {
-    font-size: 40px;
-}
-
-.headings,
-.weather-info {
-    display: flex;
-    align-items: center;
-}
-
-.headings p,
-.weather-info p {
-    width: 33.3%;
-    text-align: center;
-}
-
-.headings {
-    
-}
-
-.weather-info {
-    
+.photoBox {
+  width: 49%;
+  height: 99%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .photo {
-    width: 140px;
-    height: 140px;
-	object-fit: contain;
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+  transition: 0.4s;
+}
+
+.temp {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 140px;
+}
+
+.temperature {
+  transition: 0.4s;
+}
+
+.cityName {
+  width: 100%;
+  height: 49%;
+}
+
+.info-cityName {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.actuallyCityName {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid white;
+  flex-wrap: wrap;
+}
+
+.nameInfo {
+  display: flex;
+  width: 30%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.city {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  transition: 0.4s;
+}
+
+.inputBox {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.inputText {
+  margin-right: 50px;
+  width: 250px;
+  height: 60px;
+  background: transparent;
+  border: none;
+  font-size: 45px;
+  color: white;
+}
+
+.inputText:focus {
+  background: transparent;
+  outline: none;
+  border-bottom: 2px solid white;
+  transition: 0.4s;
+}
+
+.inputText::placeholder {
+  font-size: 20px;
+}
+
+button {
+  width: 120px;
+  height: 60px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  font-size: 25px;
+  color: white;
+}
+
+button:hover {
+  border-radius: 20px;
+  border: 2px solid white;
+  color: white;
+  transition: 0.2s;
 }
 
 .warning {
-    
+  font-size: 20px;
+  color: red;
 }
