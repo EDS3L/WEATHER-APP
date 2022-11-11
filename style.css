@@ -29,12 +29,12 @@ h1 {
   text-transform: uppercase;
   text-align: center;
   padding: 10px;
-  font-size: 56px;
+  font-size: 5vw;
 }
 
 .core {
-  width: 1000px;
-  height: 500px;
+  width: 80vw;
+  height: 40vh;
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -61,8 +61,8 @@ h1 {
 }
 
 .photo {
-  width: 350px;
-  height: 350px;
+  width: 70%;
+  height: 70%;
   object-fit: contain;
   transition: 0.4s;
 }
@@ -73,7 +73,7 @@ h1 {
   height: 50%;
   justify-content: center;
   align-items: center;
-  font-size: 140px;
+  font-size: 11vw;
 }
 
 .temperature {
@@ -109,7 +109,7 @@ h1 {
   height: 100%;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 4vw;
 }
 
 .city {
@@ -118,7 +118,7 @@ h1 {
   height: 100%;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 4vw;
   transition: 0.4s;
 }
 
@@ -127,16 +127,15 @@ h1 {
   width: 100%;
   height: 50%;
   align-items: center;
-  margin-left: 50px;
+  justify-content: space-around;
 }
 
 .inputText {
-  margin-right: 50px;
-  width: 250px;
-  height: 60px;
+  width: 40%;
+  height: 40%;
   background: transparent;
   border: none;
-  font-size: 45px;
+  font-size: 3vw;
   color: white;
 }
 
@@ -148,16 +147,16 @@ h1 {
 }
 
 .inputText::placeholder {
-  font-size: 20px;
+  font-size: 1.5vw;
 }
 
 button {
-  width: 120px;
-  height: 60px;
+  width: 30%;
+  height: 40%;
   background: transparent;
   border: none;
   border-bottom: 2px solid white;
-  font-size: 25px;
+  font-size: 2vw;
   color: white;
 }
 
@@ -169,6 +168,59 @@ button:hover {
 }
 
 .warning {
-  font-size: 20px;
+  width: 40%;
+  height: 10%;
+  font-size: 1.5vw;
   color: red;
+}
+
+.bottom {
+  width: 80vw;
+  height: 15vh;
+  display: flex;
+  margin-top: 8vh;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 3px solid white;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottomCore {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 2.4vw;
+  color: white;
+}
+
+.feelsLike {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1.7vw;
+  color: white;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+  font-size: 1.7vw;
+  color: white;
 }

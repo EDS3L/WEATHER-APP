@@ -2,10 +2,11 @@ const input = document.querySelector('input');
 const button = document.querySelector('button');
 const cityName = document.querySelector('.city');
 const photo = document.querySelector('.photo');
-const weather = document.querySelector('.weather');
+const weather = document.querySelector('.weatherInfo');
 const temperature = document.querySelector('.temperature');
 const warning = document.querySelector('.warning');
-const humidity = document.querySelector('.humidity');
+const humidity = document.querySelector('.humidityInfo');
+const feelsLikeTemp = document.querySelector('.feelsLikeTemp')
 
 const API_LINK = 'https://api.openweathermap.org/data/2.5/weather?q=';
 const API_KEY = '&appid=85575f139f919428d72f7c9dcb7a03e7';
@@ -15,8 +16,6 @@ const getWeather = () => {
   const city = input.value;
   const URL = API_LINK + city + API_KEY + API_UNITS;
 
-  const test = axios.get(URL).then((response) => console.log(response.data));
-
   axios
     .get(URL)
     .then((response) => {
@@ -24,15 +23,19 @@ const getWeather = () => {
       const hum = response.data.main.humidity;
       const weatherInfo = response.data.weather[0].main;
       const nameCity = response.data.name;
+      const feelsLike = response.data.main.feels_like
 
       const idForIcon = response.data.weather[0].id;
 
+      
+
       cityName.textContent = nameCity;
       temperature.textContent = Math.ceil(temp) + ' °';
-      // humidity.textContent = hum + ' %';
-      // weather.textContent = weatherInfo;
+      humidity.textContent = hum + ' %';
+      weather.textContent = weatherInfo;
+      feelsLikeTemp.textContent = Math.ceil(feelsLike) + ' °';
 
-      console.log(idForIcon);
+      
 
       if (idForIcon >= 200 && idForIcon <= 232) {
         photo.setAttribute('src', 'img/thunderstorm.png');
